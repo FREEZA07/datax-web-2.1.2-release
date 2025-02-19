@@ -1,0 +1,31 @@
+# web port
+server:
+  port: 8081
+
+# log config
+logging:
+  config: classpath:logback.xml
+  path: ./data/applogs/executor/jobhandler
+
+# datax配置
+datax:
+  home: /opt/datax
+  json: /opt/datax/job/
+  job:
+    path: /opt/datax/job/
+    admin:
+      addresses: http://127.0.0.1:8080
+    executor:
+      appname: datax-executor
+      ip:
+      port: 9999
+      ### job - 任务运行日志路径
+      logpath: /opt/datax/log
+      ### job - log retention days
+      logretentiondays: 30
+    ### job, access token
+    accessToken:
+
+  executor:
+    jsonpath: /opt/datax/job/
+  pypath: /opt/datax/bin/datax.py
